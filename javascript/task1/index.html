@@ -1,0 +1,83 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Rolling</title>
+    </head>
+    <style>
+        *
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+#img
+{
+    width: 150px;
+    height: 150px;
+}
+
+.btn
+{
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    background-color: rgb(205, 201, 203);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    
+}
+</style
+    <body >
+    
+        <div class="container">
+    
+    
+            <img src="1.png" alt="" id="img">
+    
+            <button class="btn" onclick="roll()">ROLL</button>
+    
+    
+    
+    
+    
+        </div>
+    
+    
+       
+    
+        
+        <script >
+            function shuffle()
+{
+    const img=document.getElementById("img");
+    let randomNumber=Math.floor(Math.random() * 6) +1 ;
+    img.setAttribute("src" , `${randomNumber}.png`);
+}
+
+function roll()
+{
+    setTimeout(shuffle,500);
+    const img = document.getElementById("img");
+    img.setAttribute("src","rollingdice.gif");
+}
+        </script>
+    </body>
+    </html>

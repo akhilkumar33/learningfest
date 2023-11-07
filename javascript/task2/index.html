@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><title>Addition</title>
+<head></head>
+<style>
+
+    *{
+
+        margin-left: 10%;
+    }
+    .in{
+
+        margin-top: 2%;
+        
+    }
+
+
+</style>
+<script>
+
+
+function fun1(){
+                     var fnum=document.getElementById("txtf1").value;
+                     var snum=document.getElementById("txtf2").value;
+                     var tot= parseInt(fnum) + parseInt(snum);
+document.getElementById("result").innerHTML=tot;
+}
+</script>
+
+<body>
+<h1>Addition of two number </h1>
+Enter first number: <input  id="txtf1" /><br/>
+Enter second number: <input class="in" id="txtf2" /> <br/>
+RESULT: <h2 id="result"></h2>
+<button onclick="fun1()">Calculate</button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>json</title>
+  <style>
+  #Data{
+    font-size: 15px ;
+    margin-left: 10%;
+    
+  }
+</style>
+</head>
+<body>
+  <div id="Data"></div>
+  <script>
+fetch('./persons.json')
+.then(function(response) {
+  return response.json();
+})
+.then (function(data) {
+  for (var i = 0; i < data.length; i++) {
+    document.getElementById("Data").innerHTML 
+    +='Name : ' + data[i].name + "<br>"
+    +'Age : '+ data[i].age+"<br>"
+    +'Place : '+data[i].place+"<br>" 
+    +'Date of Birth : '+ data[i].dob + "<br> <br>";
+}
+})
+.cacth(function(error) {
+  alert(err);
+})
+
+
+  </script>
+</body>
+</html>
